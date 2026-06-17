@@ -1,5 +1,5 @@
 # RedditForYouBlocker
-Block Reddit's stupid 'For You' page
+A Safari extension to block Reddit's stupid 'For You' page
 
 
 ## Quickstart
