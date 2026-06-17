@@ -1,0 +1,53 @@
+/*
+ * block.css — injected at document_start so "For You" never flashes visible.
+ * Targets both the old Reddit redesign and the newer shreddit (web components).
+ */
+
+/* ── Shreddit (current Reddit, 2023-) ─────────────────────────────────────── */
+
+/* "For You" tab in the top feed selector */
+shreddit-sort-dropdown [value="BEST"],
+faceplate-tabpanel[tab-id="best"],
+a[href*="/?feed=home"][aria-label*="for you" i],
+a[href*="/?feed=home"][aria-label*="For You" i] {
+  display: none !important;
+}
+
+/* The tab bar button itself (text-matched via attribute) */
+[data-testid="feed-type-selector"] li:has(> button[aria-label*="For You" i]),
+[data-testid="feed-type-selector"] li:has(> a[aria-label*="For You" i]) {
+  display: none !important;
+}
+
+/* Shreddit feed tab strip — hide the "For You" chip */
+shreddit-feed-sort-tab[tab-value="BEST"],
+shreddit-feed-sort-tab[aria-label*="for you" i] {
+  display: none !important;
+}
+
+/* Promoted / recommended "you might like" units inside the feed */
+shreddit-ad-post,
+[data-adtype],
+div[data-testid="post-container"][data-promoted="true"] {
+  display: none !important;
+}
+
+/* ── New Reddit (2020 redesign, reddit.com) ────────────────────────────────── */
+
+/* The horizontal pill tabs on the home page */
+._1ew8b6xl5r372FtngelHmY li:has(> a[href*="?feed=home"]),
+._2mHuuvyV9doV3zwbZPtIPG li:has(> a[aria-label*="For You" i]) {
+  display: none !important;
+}
+
+/* Right-rail "More posts for you" widget */
+[data-testid="more-posts-widget"],
+._3iasL8bPR2IZjFLp4fjpFn {
+  display: none !important;
+}
+
+/* Interstitial "Based on your recent activity" feed injections */
+[data-testid="recommended-posts"],
+.recommended-posts-banner {
+  display: none !important;
+}

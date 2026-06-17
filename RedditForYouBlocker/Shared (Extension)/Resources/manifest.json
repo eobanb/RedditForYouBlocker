@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit For You Blocker",
+  "version": "1.0",
+  "description": "Hides Reddit's 'For You' feed and keeps your home feed chronological.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["content.js"],
+      "css": ["block.css"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "permissions": ["storage"],
+
+  "icons": {
+    "48":  "icon-48.png",
+    "96":  "icon-96.png",
+    "128": "icon-128.png"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48":  "icon-48.png",
+      "96":  "icon-96.png",
+      "128": "icon-128.png"
+    }
+  }
+}
