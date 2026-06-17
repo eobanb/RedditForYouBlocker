@@ -10,6 +10,6 @@ A Safari extension to block Reddit's stupid 'For You' page
 
 3. Download the files from this repository
 
-4. Open in XCode and build/run
+4. Open in XCode and build/run; ignore the errors and warnings ¯\\\_(ツ)_/¯
 
 5. Go to Safari > Settings > Extensions and enable
