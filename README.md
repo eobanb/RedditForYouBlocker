@@ -2,7 +2,7 @@
 Block Reddit's stupid 'For You' page
 
 
-Quickstart
+## Quickstart
 
 1. Open Safari > Settings > Developer and enable unsigned extensions
 
